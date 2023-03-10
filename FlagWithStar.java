@@ -17,9 +17,9 @@ public class FlagWithStar
         UI.addButton("Draw star3", this::doDrawStar3);
         UI.addButton("Draw star4", this::doDrawStar4);
         UI.addButton("Draw star5", this::doDrawStar5);
-        UI.addButton("rect1", this::doRect1);
-        UI.addButton("rect1", this::doRect1);
-        UI.addButton("rect1", this::doRect1);
+        UI.addButton("tri1", this::doTri1);
+        UI.addButton("tri2", this::doTri2);
+        UI.addButton("tri3", this::doTri3);
     }
     
     /**
@@ -76,6 +76,27 @@ public class FlagWithStar
         UI.setColor(Color.white);
         double[] a = {140, 175, 185}; // x axis
         double[] b = {120, 150, 120 };// y axis
+        UI.fillPolygon(a, b, 3);
+    }
+    
+    public void doTri1(){
+        UI.setColor(Color.white);
+        double[] a = {175,185, 225}; // x axis
+        double[] b = {150,120, 120};// y axis
+        UI.fillPolygon(a, b, 3);
+    }
+    
+    public void doTri2(){
+        UI.setColor(Color.white);
+        double[] a = {175, 225, 235}; // x axis
+        double[] b = {150, 120, 150};// y axis
+        UI.fillPolygon(a, b, 3);
+    }
+    
+    public void doTri3(){
+        UI.setColor(Color.white);
+        double[] a = {175, 205, 235}; // x axis
+        double[] b = {150, 170, 150};// y axis
         UI.fillPolygon(a, b, 3);
     }
 }
